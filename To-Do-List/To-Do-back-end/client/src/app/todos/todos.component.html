@@ -1,0 +1,108 @@
+<header>
+  <div class="navbar navbar-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <strong
+          ><img
+            src="https://cdn-icons-png.flaticon.com/128/5305/5305421.png?ga=GA1.1.1586235360.1690641215&track=ais"
+            alt=""
+            srcset=""
+          />
+          𝓣𝓸-𝓓𝓸 𝓛𝓲𝓼𝓽
+        </strong>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="card">
+    <div class="add-todo-form">
+      <h2 style="color: #344e41">HELLO!</h2>
+      <h5 style="margin-top: 10px; margin-bottom: 20px; color: #344e41">
+        ✔ Add and manage your tasks here!
+      </h5>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-6">
+            <input
+              class="form-control"
+              placeholder="Add a Task..."
+              autofocus
+              #todoText
+              (keydown.enter)="addTask($event, todoText)"
+            />
+          </div>
+          <div class="col-2">
+            <button (click)="addTask($event, todoText)" class="btn_Create">
+              Add
+            </button>
+          </div>
+          <div class="col-4">
+            <button (click)="deleteAllTasks()" class="btn_Delete">
+              Delete All Tasks
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tasks row">
+        <div *ngFor="let todo of todos" class="d-flex align-items-center mb-2">
+          <div class="col-md-1">
+            <div class="checkbox-container">
+              <label class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  [checked]="todo.completed"
+                  (click)="updateStatus(todo)"
+                />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="task col-md-6">
+            <span [hidden]="todo.isEditMode">
+              {{ todo.text }}
+            </span>
+            <div class="row">
+              <div class="col-6">
+                <input
+                  class="form-control"
+                  type="text"
+                  [hidden]="!todo.isEditMode"
+                  [value]="todo.text"
+                  (keypress)="updateTodoText($event, todo)"
+                />
+              </div>
+              <input
+                type="button"
+                [hidden]="!todo.isEditMode"
+                value="Cancel"
+                (click)="setEditState(todo, false)"
+                class="btn_cancel col-4"
+              />
+            </div>
+          </div>
+          <div
+            class="col-md-5 btns d-flex align-items-center justify-content-end"
+          >
+            <input
+              (click)="deleteTask(todo)"
+              type="button"
+              class="btn_Delete"
+              value="Delete"
+            />
+            <input
+              [disabled]="todo.isEditMode || todo.completed"
+              (click)="setEditState(todo, true)"
+              type="button"
+              class="btn_Edit"
+              value="Edit"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

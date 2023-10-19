@@ -1,0 +1,17 @@
+button {
+  width: 100%;
+  height: 100%;
+  font-size: 5em !important;
+}
+
+.X_button {
+  color: rgb(249, 185, 255);
+}
+
+.O_button {
+  color: rgb(98, 203, 255);
+}
+
+* {
+  background-color: #0f0326;
+}

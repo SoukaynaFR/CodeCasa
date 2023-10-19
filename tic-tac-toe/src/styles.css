@@ -1,0 +1,11 @@
+body {
+    margin: 0; 
+    padding: 0; 
+    background: radial-gradient(circle at 11.7% 80.6%, rgb(249, 185, 255) 0%, rgb(177, 172, 255) 49.3%, rgb(98, 203, 255) 89%);
+    background-size: cover; 
+    background-attachment: fixed; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

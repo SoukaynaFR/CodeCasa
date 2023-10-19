@@ -1,0 +1,25 @@
+<h2 *ngIf="winner" class="winner">
+  🎉 Player
+  <span style="color: #592941; font-size: 30px"> {{ winner }}</span> won the
+  game!
+</h2>
+
+<div class="container">
+  <h1
+    class="current_player"
+    [ngStyle]="{
+      color: player === 'X' ? ' rgb(249, 185, 255)' : 'rgb(98, 203, 255)'
+    }"
+  >
+    Whose move : {{ player }}
+  </h1>
+
+  <main>
+    <app-square
+      *ngFor="let val of squares; let i = index"
+      [value]="val"
+      (click)="makeMove(i)"
+    ></app-square>
+  </main>
+  <button class="newGame" (click)="newGame()">Restart</button>
+</div>

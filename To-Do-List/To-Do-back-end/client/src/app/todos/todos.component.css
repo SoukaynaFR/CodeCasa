@@ -1,0 +1,135 @@
+header {
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 600px;
+  height: 80vh;
+  background-color: #e8f1f2;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px #081c15;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.btn_Delete {
+  background-color: #e63946;
+  border: none;
+  color: white;
+  font-size: larger;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.btn_Edit {
+  background-color: #fcbf49;
+  border: none;
+  color: white;
+  font-size: larger;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.btn_Create {
+  background-color: #52b788;
+  border: none;
+  color: white;
+  font-size: larger;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.btn_cancel {
+  background-color: #e8f1f2;
+  border: 1px solid #52b788;
+  color: #52b788;
+  font-size: larger;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.tasks {
+  margin-top: 20px;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+.task {
+  color: #344e41;
+  font-size: 18px;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ffffff;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #06d6a0;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}

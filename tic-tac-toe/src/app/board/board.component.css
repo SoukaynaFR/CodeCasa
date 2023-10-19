@@ -1,0 +1,51 @@
+main {
+  display: grid;
+  grid-template-columns: 140px 140px 140px;
+  grid-gap: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+app-square {
+  height: 140px;
+  border: none;
+  outline: none;
+}
+
+.container {
+  width: 500px;
+  height: 90vh;
+  background-color: #0f0326;
+  padding: 10px;
+}
+
+.newGame {
+  background-color: rgb(177, 172, 255);
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: #efefef;
+  margin-top: 20px;
+  position: relative;
+  left: 40%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.current_player {
+  color: #efefef;
+  position: relative;
+  left: 20%;
+}
+
+.winner {
+  position: relative;
+  left: 10%;
+  font-size: 28px;
+  color: #0f0326;
+}
+
+.newGame:hover {
+  background-color: #592941;
+  color: rgb(177, 172, 255);
+}
