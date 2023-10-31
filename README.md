@@ -1,7 +1,11 @@
 <h1 align="center">Code Casa Repository</h1>
 <h5 align="left">In this repository, i'm gathering all the documents and completed tasks related to my internship as Web developer and designer at Code Casa from  01 October 2023 to 01 November 2023  </h5>
 
-<h3 >completed tasks (2/2) </h3>
+<h3 >completed tasks (3/3) </h3>
+
+<h4> TASK 1: Portfolio : </h4>
+<h5> I have created my porftolio using HTML, CSS and Javascript </h5>
+<h5> <strong> Github repo: </strong> https://github.com/SoukaynaFR/MyPortfolio </h5>
 
 <h4> TASK 2: To-Do List : </h4>
 <h5> I have created a To-Do list application using the MEAN Stack </h5>
